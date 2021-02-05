@@ -17,7 +17,6 @@ tasks.withType(JavaCompile) {
 }
 
 task SelenideGithubTest (type: Test) {
-    useJUnitPlatform {
-        includeTags 'SelenideGithubTest'
-    }
+    useJUnitPlatform()
+
 }
