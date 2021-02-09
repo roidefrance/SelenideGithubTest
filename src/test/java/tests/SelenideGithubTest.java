@@ -19,7 +19,8 @@ public class SelenideGithubTest {
     }
     @Test
     void PageTest() {
-    open("https://github.com/selenide/selenide/wiki/SoftAssertions");
-    $("html").shouldHave(text("assert"));
+    open("https://github.com/selenide/selenide");
+    $$("ul.UnderlineNav-body.list-style-none li").get(4).$("a").click();
+    $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
     }
 }
