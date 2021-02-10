@@ -22,5 +22,8 @@ public class SelenideGithubTest {
     open("https://github.com/selenide/selenide");
     $$("ul.UnderlineNav-body.list-style-none li").get(4).$("a").click();
     $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
+    $(byLinkText("SoftAssertions")).click();
+    $("html").shouldHave(text("JUnit5"));
+    Selenide.sleep(3000);
     }
 }
