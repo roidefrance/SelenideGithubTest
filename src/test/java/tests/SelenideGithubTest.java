@@ -23,7 +23,8 @@ public class SelenideGithubTest {
     $$("ul.UnderlineNav-body.list-style-none li").get(4).$("a").click();
     $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
     $(byLinkText("SoftAssertions")).click();
-    $("html").shouldHave(text("JUnit5"));
-    Selenide.sleep(3000);
+    // альтернатива $$("ul.m-0.p-0.list-style-none li").get(14).$("a").click();
+    $(".markdown-body").shouldHave(text("JUnit5"));
+    sleep(1000);
     }
 }
