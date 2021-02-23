@@ -20,10 +20,11 @@ public class SelenideGithubTest {
     }
     @Test
     void PageTest() {
-    open("https://github.com");
-    $(byName("q")).val(("selenide")).pressEnter();
-    $(".repo-list a").click();
-    // open("https://github.com/selenide/selenide");
+    open("https://github.com/selenide/selenide");
+    // альтернатива -
+        // open("https://github.com");
+        // $(byName("q")).val(("selenide")).pressEnter();
+        // $(".repo-list a").click();
     $(byLinkText("Wiki")).click();
     // альтернатива $$("ul.UnderlineNav-body.list-style-none li").get(4).$("a").click();
     $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
