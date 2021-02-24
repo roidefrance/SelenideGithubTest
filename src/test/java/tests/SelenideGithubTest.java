@@ -13,11 +13,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SelenideGithubTest {
-    @BeforeAll
-    static void setup(){
-        Configuration.startMaximized = true;
-    }
+public class SelenideGithubTest extends TestBase {
     @Test
     void PageTest() {
     open("https://github.com/selenide/selenide");
